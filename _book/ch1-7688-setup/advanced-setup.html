@@ -1,0 +1,380 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <title>Advanced Setup · GitBook</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.0">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../ch2-application-with-bluemix/bluemix-setup.html" />
+    
+    
+    <link rel="prev" href="burn-firmware.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    7688 Setup
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="first-use.html">
+            
+                <a href="first-use.html">
+            
+                    
+                    First Use
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="burn-firmware.html">
+            
+                <a href="burn-firmware.html">
+            
+                    
+                    Burn Firmware
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.3" data-path="advanced-setup.html">
+            
+                <a href="advanced-setup.html">
+            
+                    
+                    Advanced Setup
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../ch2-application-with-bluemix/bluemix-setup.html">
+            
+                <a href="../ch2-application-with-bluemix/bluemix-setup.html">
+            
+                    
+                    Application With Bluemix
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../ch2-application-with-bluemix/dialog-robot.html">
+            
+                <a href="../ch2-application-with-bluemix/dialog-robot.html">
+            
+                    
+                    Dialog Robot
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../ch2-application-with-bluemix/visual-recognition.html">
+            
+                <a href="../ch2-application-with-bluemix/visual-recognition.html">
+            
+                    
+                    Visual Recognition
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Advanced Setup</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="advanced-setup">Advanced Setup</h1><h2 id="tty-login">TTY login</h2><table>
+<thead>
+<tr><th> Pins on USB adapter </th>
+<th> Pins to be connected on 7688 </th>
+</tr></thead><tbody>
+<tr><td style="text-align:center"> RX </td>
+<td style="text-align:center"> 8 </td>
+</tr><tr><td style="text-align:center"> TX </td>
+<td style="text-align:center"> 9 </td>
+</tr><tr><td style="text-align:center"> GND </td>
+<td style="text-align:center"> GND</td>
+</tr></tbody></table>
+
+<p>Connect with GNU Screen.</p><pre><code class="lang-sh">screen /dev/ttyUSB0 57600</code></pre>
+<h2 id="setup-7688-wifi">Setup 7688 WiFi</h2><p>Edit /etc/config/wireless.</p><pre><code class="lang-sh">config wifi-iface <span class="hljs-string">&apos;sta&apos;</span>
+        option device <span class="hljs-string">&apos;radio0&apos;</span>
+        option mode <span class="hljs-string">&apos;sta&apos;</span>
+        option network <span class="hljs-string">&apos;wan&apos;</span>
+        option ifname <span class="hljs-string">&apos;apcli0&apos;</span>
+        option led <span class="hljs-string">&apos;mediatek:orange:wifi&apos;</span>
+        option disabled <span class="hljs-string">&apos;0&apos;</span>
+        option ssid <span class="hljs-string">&apos;&lt;ssid&gt;&apos;</span>
+        option key <span class="hljs-string">&apos;&lt;key&gt;&apos;</span>
+        option encryption <span class="hljs-string">&apos;psk2&apos;</span></code></pre>
+<p>Restart wifi and check.</p><pre><code class="lang-sh">wifi
+ping 8.8.8.8</code></pre>
+<h2 id="optional-enable-wifi-ap-mode-and-station-mode-simultaneously">(Optional) Enable WiFi AP mode and Station mode simultaneously.</h2><p>Edit /lib/netifd/wireless/ralink.sh.</p><p>Add the line sta_disabled=1 after ralink.sh checked sta status to enable ap mode.</p><pre><code class="lang-sh">sed -i <span class="hljs-string">&apos;/sta_disabled=/a\\tsta_disabled=1&apos;</span> /lib/netifd/wireless/ralink.sh
+wifi</code></pre>
+<h2 id="congigure-the-usb-sound-card">Congigure the USB sound card.</h2><pre><code class="lang-sh">opkg update
+opkg install kmod-usb-audio
+aplay <span class="hljs-_">-l</span>
+aplay -D plughw:1,0 &lt;audio-file.wav&gt;</code></pre>
+<p>Choose the USB sound card and tune the volume with alsamixer.</p><pre><code class="lang-sh">alsamixer</code></pre>
+<h2 id="extend-root-file-system-to-sd-card">Extend root file system to SD card.</h2><p>List orginal space on-board flash.</p><pre><code class="lang-sh">df -h</code></pre>
+<p>Install the required packages.</p><pre><code class="lang-sh">opkg update
+opkg install block-mount kmod-fs-ext4 kmod-usb-storage-extras e2fsprogs fdisk</code></pre>
+<p>Insert the SD card and format it to ext4 file system.</p><pre><code class="lang-sh">mkfs.ext4 /dev/mmcblk0</code></pre>
+<p>Duplicate the root file system to SD card.</p><pre><code class="lang-sh">mount /dev/mmcblk0 /mnt
+tar -C /overlay -cvf - . | tar -C /mnt -xf -
+umount /mnt</code></pre>
+<p>Congiure the fstab.</p><p>change the target option to &apos;/overlay&apos;, and the enabled option to &apos;1&apos;.</p><pre><code class="lang-sh">block detect &gt; /etc/config/fstab
+vi /etc/config/fstab</code></pre>
+<p>Reboot and check the new space.</p><pre><code class="lang-sh">reboot
+df -h</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="burn-firmware.html" class="navigation navigation-prev " aria-label="Previous page: Burn Firmware">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../ch2-application-with-bluemix/bluemix-setup.html" class="navigation navigation-next " aria-label="Next page: Application With Bluemix">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Advanced Setup","level":"1.2.3","depth":2,"next":{"title":"Application With Bluemix","level":"1.3","depth":1,"path":"ch2-application-with-bluemix/bluemix-setup.md","ref":"ch2-application-with-bluemix/bluemix-setup.md","articles":[{"title":"Dialog Robot","level":"1.3.1","depth":2,"path":"ch2-application-with-bluemix/dialog-robot.md","ref":"ch2-application-with-bluemix/dialog-robot.md","articles":[]},{"title":"Visual Recognition","level":"1.3.2","depth":2,"path":"ch2-application-with-bluemix/visual-recognition.md","ref":"ch2-application-with-bluemix/visual-recognition.md","articles":[]}]},"previous":{"title":"Burn Firmware","level":"1.2.2","depth":2,"path":"ch1-7688-setup/burn-firmware.md","ref":"ch1-7688-setup/burn-firmware.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["youtube","livereload"],"pluginsConfig":{"youtube":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"ch1-7688-setup/advanced-setup.md","mtime":"2016-09-10T10:11:40.045Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-09-09T18:30:25.280Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
