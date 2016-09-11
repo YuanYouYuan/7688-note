@@ -2,7 +2,7 @@ var watson = require('watson-developer-cloud');
 var speak = require('./say');
 var fs = require('fs');
 var cp = require('child_process');
-var cred = JSON.parse(fs.readFileSync('./my-stt-crendential.json'));
+var cred = JSON.parse(fs.readFileSync('./stt-cred.json'));
 var stt = watson.speech_to_text({
 	username: cred.username,
 	password: cred.password,

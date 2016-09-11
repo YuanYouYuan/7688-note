@@ -35,7 +35,8 @@ Launch alsamixer to tune the gain of the usb sound card.
 ```sh
 alsamixer
 ```
-Remember to press <F6> to select USB sound card 
+Remember to press F6 to select USB sound card 
+
 
 ![](pic/alsamixer.png)
 
@@ -112,21 +113,64 @@ df -h
 ![](pic/new-device-space.png)
 
 
-## Deploy the app on 7688
+### Speech to text service on Bluemix
 
-First, download the app folder to 7688. Using scp or SD card is recommended.
+Follow this [instruction](bluemix-setup.md) to finish the configuration of cf.
 
-Second, plug in USB sound card on 7688 USB port, and then connect microphone and speaker.
+Then launch a terminal (Command prompt in Windows) and type the following commands.
 
-Finally, log in to 7688 and clone this repo,
-and **replace the app/my-stt-credentials with your credentials**,
-then launch the application in app folder.
 
 ```sh
-git clone https://github.com/YuanYouYuan/Bluemix-tutorial.git
-cd Bluemix-tutorial/7688/app
+cf create-service speech_to_text standard my-stt-service
+cf create-service-key my-stt-service stt-cred
+cf service-key my-stt-service stt-cred
+```
+
+Then you will get your credential of speech to text service.
+
+For example:
+```sh
+Getting key stt-cred for service instance my-stt-service as az6980522+0910@gmail.com...
+
+{
+ "password": "NBBOzZJ80NSr",
+ "url": "https://stream.watsonplatform.net/speech-to-text/api",
+ "username": "4ed4c427-1972-4359-b321-9be6fc716e18"
+}
+```
+Please remember the above username and password, 
+or you can copy the content and save as a text file.
+
+
+
+### Deploy the app on 7688
+
+Now please log in 7688 and deploy the application on it.
+
+First, download the dialog robot code to 7688 and unzip it.
+
+```sh
+curl -L https://github.com/YuanYouYuan/7688-note/raw/master/ch2-application-with-bluemix/code/7688-dialog-robot.tar.gz | tar zxv
+```
+
+Change the directory to 7688-dialog-robot and input your stt service credential.
+
+```sh
+python parse-stt-cred.py
+```
+
+![](pic/parse-cred.png)
+
+
+Final step. 
+
+Plug in USB sound card on 7688 USB port, and connect microphone and speaker.
+
+Type in the following command to exectue node app.
+
+```sh
 node app.js
 ```
 
-
+Enjoy it!!!
 

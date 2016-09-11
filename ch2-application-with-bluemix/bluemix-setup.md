@@ -77,28 +77,6 @@ Space:          dev
 
 
 
-## Install Node.js and NPM (nodejs package manager)
-
-https://nodejs.org/en/download/
-
-![nodejs-website](pic/nodejs-website.png)
-
-For Windows/Mac OS X, 
-it is convinent to use the installer at the official website.
-Note that the npm has been included in the nodejs installer.
-
-For linux, 
-it is recommended to install nodejs and npm with your package manager.
-
-Debian/Ubuntu
-```sh
-sudo apt-get install node npm
-```
-Arch
-```sh
-yaourt -S node npm
-```
-
 
 ## Reference
 
