@@ -19,7 +19,7 @@
 
 ### Congigure the USB sound card.
 
-First log in to 7688 and type following commands in tty.
+First, log in 7688 and type following commands in tty.
 
 Install usb audio driver.
 
@@ -91,7 +91,7 @@ tar -C /overlay -cvf - . | tar -C /mnt -xf -
 umount /mnt
 ```
 
-Congiure the fstab.
+Configure the fstab
 
 Generate file system table, and then change the target option to '/overlay', 
 and the enabled option to '1'.
@@ -139,7 +139,7 @@ Getting key stt-cred for service instance my-stt-service as az6980522+0910@gmail
 }
 ```
 Please remember the above username and password, 
-or you can copy the content and save as a text file.
+or you can copy the content and save it as a text file.
 
 
 
@@ -162,7 +162,7 @@ python parse-stt-cred.py
 ![](pic/parse-cred.png)
 
 
-Final step. 
+Final step
 
 Plug in USB sound card on 7688 USB port, and connect microphone and speaker.
 
@@ -172,5 +172,5 @@ Type in the following command to exectue node app.
 node app.js
 ```
 
-Enjoy it!!!
+Hope you enjoy it!!!
 
