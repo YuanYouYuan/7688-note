@@ -141,6 +141,10 @@ Getting key stt-cred for service instance my-stt-service as az6980522+0910@gmail
 Please remember the above username and password, 
 or you can copy the content and save it as a text file.
 
+Finally you will get a dashboard like the picture shows if you complete the above steps.
+
+[](pic/my-stt-service-on-webui.png)
+
 
 
 ### Deploy the app on 7688
