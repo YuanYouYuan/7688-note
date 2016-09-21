@@ -8,4 +8,5 @@
 * [Application With Bluemix](ch2-application-with-bluemix/bluemix-setup.md)
     * [Dialog Robot](ch2-application-with-bluemix/dialog-robot.md)
     * [Visual Recognition](ch2-application-with-bluemix/visual-recognition.md)
+* [Application With Microsoft Cognitive Service](ch3-ms/ms-face-cognition.md)
 
