@@ -3,7 +3,7 @@
 This project is for connecting web cam and Microsoft cognitive service through Linkit 7688,meanwhile, display the detected face information on the webpage 
 
 #Requirements
-*  Linkit smart 7688 Duo
+*  Linkit smart 7688 
 *  webcam
 
 
