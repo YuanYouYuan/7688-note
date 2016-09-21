@@ -50,7 +50,21 @@ Press _copy_ button in Keys column and paste it in the _sed_ command.
 For examle, my api key is a05f5738bdd7449b85ced1075129137b.
 
 ```sh
-sed -i 's/my-face-cognition-api-key/a05f5738bdd7449b85ced1075129137b/g' face-cognition.js
+sed -i 's/my-face-api-key/a05f5738bdd7449b85ced1075129137b/g' face-cognition.js
+```
+
+Also, have one emotion api key.
+
+![](pic/emotion-api.png)
+
+![](pic/emotion-api-keys.png)
+
+
+Press _copy_ button in Keys emotion api column and paste it in the _sed_ command.
+For examle, my api key is 512a3e8d759c45d2898a072e62a1b018.
+
+```sh
+sed -i 's/my-emotion-api-key/512a3e8d759c45d2898a072e62a1b018/g' face-cognition.js
 ```
 
 Finally, connect your webcam with OTG cable to 7688 and run the cognition.js!
@@ -60,4 +74,6 @@ node face-cognition.js
 ```
 
 
+# Demo
 
+![](pic/console-demo.png)

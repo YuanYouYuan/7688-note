@@ -58,7 +58,7 @@ server.listen(3000,function(){
           url: 'https://api.projectoxford.ai/face/v1.0/detect?returnFaceId=true&returnFaceAttributes=age,gender',
           headers: {
               'Content-Type': 'application/octet-stream',
-              'Ocp-Apim-Subscription-Key': 'my-face-cognition-api-key'
+              'Ocp-Apim-Subscription-Key': 'my-face-api-key'
           },
           body:data
 
@@ -74,6 +74,22 @@ server.listen(3000,function(){
                 console.log('Face Detect');
                 io.emit('message',{'id':Fdata[0].faceId,'gender':Fdata[0].faceAttributes.gender,'age':Fdata[0].faceAttributes.age});
               }
+          }
+      });
+	
+      /*--------emotion API-----------*/
+      request({
+          method: 'POST',
+          url: 'https://api.projectoxford.ai/emotion/v1.0/recognize',
+          headers: {
+              'Content-Type': 'application/octet-stream',
+              'Ocp-Apim-Subscription-Key': 'my-emotion-api-key'
+          },
+          body: data
+      }, function (error, response, body) {
+          if (!error && response.statusCode == 200) {
+              var object = JSON.parse(body);
+              console.dir(object, {depth: null, colors: true});
           }
       });
       });
