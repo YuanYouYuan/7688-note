@@ -46,7 +46,7 @@ And go to Face API and have your new face api key.
 
 ![](pic/face-api-keys.png)
 
-Press _copy_ button in Keys column and paste it in the sed command.
+Press _copy_ button in Keys column and paste it in the _sed_ command.
 For examle, my api key is a05f5738bdd7449b85ced1075129137b.
 
 ```sh
