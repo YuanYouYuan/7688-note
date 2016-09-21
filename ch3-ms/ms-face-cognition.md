@@ -25,7 +25,7 @@ Login 7688 and type the following commands in the console.
 Download the code and change the working directory to it.
 
 ```sh
-curl -L https://github.com/YuanYouYuan/7688-note/raw/master/ch3-ms/code/face-cognition/ms-face-cognition.tar.gz | tar zxv
+curl -L https://github.com/YuanYouYuan/7688-note/raw/master/ch3-ms/code/face-cognition.tar.gz | tar zxv
 cd ms-face-cognition
 ```
 
