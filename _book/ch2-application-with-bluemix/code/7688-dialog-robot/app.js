@@ -1,22 +1,29 @@
-var watson = require('watson-developer-cloud');
-var speak = require('./say');
+// import node.js modules
+var watson = require('watson-developer-cloud'); 
+var speak = require('./say'); 					
 var fs = require('fs');
 var cp = require('child_process');
-var cred = JSON.parse(fs.readFileSync('./stt-cred.json'));
+
+//parse the service credential
+var cred = json.parse(fs.readfilesync('./stt-cred.json')); 
 var stt = watson.speech_to_text({
 	username: cred.username,
 	password: cred.password,
 	version: 'v1'
 });
 
+
+// define a function to record the sound from microphone
 function listen() {
 
+	// set the parameters to use Chinese model and wav audio format
 	var params = {
-		model: 'zh-CN_BroadbandModel',
+		model: 'zh-CN_BroadbandModel',  
 		content_type: 'audio/wav',
 		continuous: true
 	};
 
+	// spawn a subprocess to record the sound and stream to watson speech to text recognize service
 	var recognizeStream =  stt.createRecognizeStream(params);
 	var record = cp.spawn('arecord', ['--device=plughw:1,0', '--rate=22000']);
 	record.stderr.pipe(process.stderr);
@@ -32,6 +39,7 @@ function listen() {
 
 }
 
+// define a dialog function to make a conversation with users
 function dialog(text) {
 	if (String(text).indexOf('不好') > -1)
 		speak('我好難過嗚嗚嗚嗚嗚');
@@ -54,6 +62,7 @@ function dialog(text) {
 	console.log(text);
 }
 
+// run listen function
 listen();
 
 

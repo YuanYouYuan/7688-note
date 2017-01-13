@@ -1,9 +1,10 @@
+// import node.js process 
 var exec = require('child_process').exec;
 var fs =require('fs');
 var request = require('request');
 var qs = require('querystring');
 
-
+// export function speak 
 module.exports = function speak(words) {
 
 	var params = {
@@ -13,10 +14,12 @@ module.exports = function speak(words) {
 		textlen: 32,
 		client: 'tw-ob',
 		q: words,
-		tl: 'zh'
+		tl: 'zh' // set the speak language to Chinese
 	};
 
+	// set the request url to google translate api
 	var request_url = "http://translate.google.com/translate_tts?" + qs.stringify(params);
+	
 	var options = {
 		url: "http://translate.google.com/translate_tts?" + qs.stringify(params),
 		headers: {
@@ -24,6 +27,7 @@ module.exports = function speak(words) {
 		}
 	};
 
+	// create a file stream to transfer the request result to audio file and play it with aplay after file converstion(mp3 -> wav)
 	var writeStream = fs.createWriteStream('./output.mp3');
 	writeStream.on('finish', function() {
 		console.log('Done and play.');
