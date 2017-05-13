@@ -2,14 +2,15 @@
 
 This project is for connecting web cam and Microsoft cognitive service through Linkit 7688,meanwhile, display the detected face information on the webpage 
 
-#Requirements
+# Requirements
 *  Linkit smart 7688 
 *  webcam
 
 
-#Code review
+# Code review
 
-###cognitive.js
+### cognitive.js
+
 * open the webcam
 * make snapshot periodically and output a jpg file
 * read the jpg file and post to cognitive api
@@ -33,7 +34,7 @@ Then use sed command to change the __linkit_7688_ip__ to which ip your 7688 is u
 For example, my pc and 7688 are in the same local network, and my 7688 ip is 192.168.0.102.
 
 ```sh
-sed -i 's/linkit_7688_ip/192.168.0.102/g' cognitive.js static/index.html
+sed -i 's/linkit_7688_ip/192.168.0.102/g' face-cognition.js static/index.html
 ```
 Go to Microsoft Cognitive Service website and regist a new account if you don't have one.
 https://www.microsoft.com/cognitive-services
